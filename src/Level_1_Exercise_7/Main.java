@@ -18,7 +18,7 @@ public class Main {
         List<String> SortedStrings = elements.stream()
                 .filter(element -> element instanceof String)
                 .map(element -> (String) element)
-                .sorted(Comparator.comparingInt(String::length))
+                .sorted(Comparator.comparingInt(String::length).reversed())
                 .collect(Collectors.toList());
 
         System.out.println("Chains ordered by length: " + SortedStrings);
